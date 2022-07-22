@@ -30,17 +30,15 @@ let recipes = [
 // Your code goes here:
 
 let recCont;
-
-
-
 for (i = 0; i < recipes.length; i++){
     recCont = document.createElement("div");
     recEle = document.createElement("li")
-    recList = recCont.appendChild(recEle)
-    document.querySelector(".recipes").appendChild(recCont);    
-    recList.innerHTML = `<h2>${recipes[i].title}</h2> <p> <strong>Time: </strong>${recipes[i].time} <BR>
+    recList = recCont.appendChild(recEle).innerHTML = ` <h2>${recipes[i].title}</h2> <p> <strong>Time: </strong>${recipes[i].time} <BR>
     <strong>Calories: </strong> ${recipes[i].calories} <BR> <strong>Ingredients: </strong> ${recipes[i].ingredients}  </p>`; 
-}
+    document.querySelector(".recipes").appendChild(recCont);
+}   
+
+
 
 // Each recipe should be in its own div, that can be recCont. We are declaring it here since we will want to change its value with each itteration of the loop.
 // `<h2>${recipes[i].title}</h2> <p> <strong>Time: </strong>${recipes[i].time} <BR>
